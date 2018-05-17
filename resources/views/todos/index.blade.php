@@ -1,4 +1,5 @@
 @extends('layouts.app')
+
     @section('content')
         <h1>Todos</h1>
 
@@ -6,8 +7,7 @@
                     @foreach($todos as $todo)
 
                         <div class="well">
-                            <h3>{{$todo->text}}</h3>
-                            <span class="label laber-danger">{{$todo->due}}</span>
+                            <h3><a href="todo/{{$todo->id}}"> {{$todo->text}} </a> <span class="label label-danger">{{$todo->due}}</span></h3>
                         </div>
 
                     @endforeach
